@@ -17,21 +17,21 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wilApp-deployment
+  name: wilapp-deployment
   labels:
-    app: wilApp
+    app: wilapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: wilApp
+      app: wilapp
   template:
     metadata:
       labels:
-        app: wilApp
+        app: wilapp
     spec:
       containers:
-      - name: wilApp
+      - name: wilapp
         image: wil42/playground:v1
         ports:
         - containerPort: 8888
